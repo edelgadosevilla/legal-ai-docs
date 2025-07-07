@@ -15,3 +15,29 @@ python -m venv .venv
 source .venv/bin/activate  # Linux/Mac
 # .venv\Scripts\activate  # Windows
 pip install -r requirements.txt
+
+Requisitos previos
+Elasticsearch 8.x
+
+Python 3.9+
+
+Modelos de Hugging Face (se descargan automáticamente)
+
+Uso
+Iniciar la API:
+bash
+uvicorn api.main:app --reload
+Endpoints:
+POST /upload: Subir documentos PDF
+
+GET /search?query=...: Realizar búsquedas semánticas
+
+Ejemplo de búsqueda:
+python
+import requests
+
+response = requests.get(
+    "http://localhost:8000/search",
+    params={"query": "Mencione las actas con resoluciones sobre propiedad intelectual del 2023"}
+)
+print(response.json())
