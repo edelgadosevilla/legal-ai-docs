@@ -9,8 +9,7 @@ Herramienta de IA para acelerar el procesamiento de documentación legal mediant
 ## Instalación
 
 ```bash
-git clone https://github.com/tu-usuario/legal-ai-docs.git
-cd legal-ai-docs
+https://github.com/edelgadosevilla/legal-ai-docs.git
 python -m venv .venv
 source .venv/bin/activate  # Linux/Mac
 # .venv\Scripts\activate  # Windows
